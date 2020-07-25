@@ -1,0 +1,45 @@
+@()
+@main("Login") {
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>yes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+</head>
+<body>
+<div class="title">
+<h1>Login</h1>
+</div>
+
+<div class="form-container">
+<div class="form-group-main">
+  <form>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <div class="btn-container">
+
+    <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+    <div class="form-text">
+      <p>Don't have an account? <a href="/register">Sign Up</a></p>
+      <a href="/reset">Forgetten Login?</a>
+    </div>
+
+  </form>
+</div>
+</div>
+
+</body>
+</html>
+
+}
