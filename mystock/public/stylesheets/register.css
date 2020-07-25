@@ -1,0 +1,28 @@
+body{
+background:	#101010;
+}
+.title {
+    color:#ffffff;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+.form-container {
+    padding:40px 40px;
+    margin: 5% 40%;
+    background: #ffffff;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+
+.btn-container {
+    margin: 10%;
+    text-align:center;
+}
+
+.form-text {
+    text-align:center;
+}
+

@@ -19,9 +19,7 @@ public class LoginController extends Controller {
     }
 
 
-    public Result register() {return ok("Hit the register page");}
 
     public Result reset() { return ok("reset pword");}
-
 
 }

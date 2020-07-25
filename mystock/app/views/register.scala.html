@@ -1,0 +1,42 @@
+@()
+
+@main("Register"){
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/stylesheets/register.css">
+    </head>
+    <body>
+    <div class="title">
+        <h1>Register</h1>
+    </div>
+    <div class="form-container">
+        <div class="form-group-main">
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="btn-container">
+
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+                <div class="form-text">
+                    <a href="/">Have an account?</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    </body>
+    </html>
+}
