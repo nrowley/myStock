@@ -1,4 +1,5 @@
-@()
+@(userForm : Form[User])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+@import helper._
 
 @main("Register"){
     <html lang="en">
@@ -11,32 +12,13 @@
     <div class="title">
         <h1>Register</h1>
     </div>
-    <div class="form-container">
-        <div class="form-group-main">
-            <form action="/register" method="post">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter Username">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                </div>
-                <div class="btn-container">
+        @helper.form(action = routes.RegisterController.submitDetails()){
+        @CSRF.formField;
+         @helper.inputText(userForm("username"))
+         @helper.inputText(userForm("password"))
 
-                    <button type="submit" class="btn btn-primary">Register</button>
-                </div>
-                <div class="form-text">
-                    <a href="/">Have an account?</a>
-                </div>
-
-            </form>
-        </div>
-    </div>
+        <button type="submit">Register</button>
+        }
     </body>
     </html>
 }

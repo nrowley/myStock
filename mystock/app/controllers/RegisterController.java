@@ -1,12 +1,20 @@
 package controllers;
 
 import play.mvc.*;
+import play.api.data;
+import java.util.*;
 
 public class RegisterController extends Controller {
-    public Result register() {return ok(views.html.register.render());}
+    @Inject
+    FormFactory formFactory;
 
-    public Result submitDetails() {
-        final Map<String,String[]> form_values = request().body().asFormUrlEncoded();
-        return(ok(form_values.get("username")[0]));
+    public Result register() {
+        Form<User> userForm = formFactory.form(User.class);
+        return ok(views.html.register.render(userForm));
+
+    }
+
+    public Result submitDetails(){
+        return TODO;
     }
 }
