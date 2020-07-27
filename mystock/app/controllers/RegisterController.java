@@ -1,20 +1,18 @@
 package controllers;
 
 import play.mvc.*;
-import play.api.data;
 import java.util.*;
 
 public class RegisterController extends Controller {
-    @Inject
-    FormFactory formFactory;
+
 
     public Result register() {
-        Form<User> userForm = formFactory.form(User.class);
-        return ok(views.html.register.render(userForm));
+        return ok(views.html.register.render());
 
     }
 
     public Result submitDetails(){
-        return TODO;
+        // TODO: 27/07/2020
+        return(ok("todo"));
     }
 }
