@@ -8,6 +8,7 @@ GET     /                           controllers.LoginController.index
 GET /register                       controllers.RegisterController.register
 GET /reset                          controllers.LoginController.reset
 
-POST /register                      controllers.RegisterController.submitDetails
++ nocsrf
+POST /register                      controllers.RegisterController.submitDetails(request: Request)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="mystock/.g8/form/app"/>
+	<classpathentry kind="src" path="mystock/.g8/form/generated-test"/>
+	<classpathentry kind="src" path="mystock/app"/>
+	<classpathentry kind="src" path="mystock/target/scala-2.13/routes/main"/>
+	<classpathentry kind="src" path="mystock/test"/>
+	<classpathentry kind="lib" path="target/scala-2.12/mystock_2.12-0.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="mystock/target/scala-2.13/classes"/>
+</classpath>
