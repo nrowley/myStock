@@ -18,7 +18,9 @@ public class Register extends Controller {
     public Result submitDetails(Http.Request request){
         
         DynamicForm requestData = formFactory.form().bindFromRequest(request);
-        
-        //return(ok(requestData));
+        String username = requestData.get("username");
+        String email = requestData.get("email");
+            
+        return ok("Hello" + username);
     }
 }
