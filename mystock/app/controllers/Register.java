@@ -24,9 +24,10 @@ public class Register extends Controller {
         String username = requestData.get("username");
         String email = requestData.get("email");
         */
-        
+
         Form<User> userForm = formFactory.form(User.class).withDirectFieldAccess(true);
         User user = userForm.bindFromRequest(request).get();
-        return ok("Hello" + user.getUsername());
+        user.hashPassword();
+        return ok("Hello" + user.getPassword());
     }
 }

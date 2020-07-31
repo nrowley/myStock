@@ -1,12 +1,13 @@
 package models;
 
+import java.security.*;
+import algorithm.BCrypt;
 
 public class User {
 
     protected String username;
     protected String password;
     protected String email;
-    protected String pwdHash;
 
     public void AddToDb(){
         
@@ -14,11 +15,15 @@ public class User {
 
 
     public String getUsername() {return username;}
-    public String getPasswordUnhashed(){return password;}
+    public String getPassword(){return password;}
     public String getEmail() {return email;}
 
-    private String hashPassword(){
-        
+    public void hashPassword(){
+        setPassword(BCrypt.hashpw(password,BCrypt.gensalt()));
+    }
+
+    private void setPassword(String password){
+        this.password = password;
     }
     
 }
