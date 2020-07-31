@@ -20,19 +20,12 @@ public class Register extends Controller {
 
     public Result submitDetails(Http.Request request){
         
-        /*
-        DynamicForm requestData = formFactory.form().bindFromRequest(request);
-        String username = requestData.get("username");
-        String email = requestData.get("email");
-        */
+ 
 
         Form<User> userForm = formFactory.form(User.class).withDirectFieldAccess(true);
         User user = userForm.bindFromRequest(request).get();
-        user.hashPassword();
-
-
-        //return ok("Hello" + user.getPassword());
-        DbHandler.addUser(user);
-        return ok("Hello " + user.getPassword());
+        user.hashPassword(); //hash user password
+        DbHandler.addUser(user); //add user to db
+        return ok();
     }
 }

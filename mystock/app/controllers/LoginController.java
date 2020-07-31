@@ -1,25 +1,38 @@
 package controllers;
 
 import play.mvc.*;
+import play.*;
+import play.data.*;
+import models.DbHandler;
+import models.User;
+import javax.inject.*;
 
-/**
- * This controller contains an action to handle HTTP requests
- * to the application's home page.
- */
 public class LoginController extends Controller {
 
-    /**
-     * An action that renders an HTML page with a welcome message.
-     * The configuration in the <code>routes</code> file means that
-     * this method will be called when the application receives a
-     * <code>GET</code> request with a path of <code>/</code>.
-     */
+
+    @Inject FormFactory formFactory;
+
     public Result index() {
-        return ok(views.html.index.render());
+        return ok(views.html.login.render());
     }
 
 
+    public Result login(Http.Request request){
+        Form<User> loginForm = formFactory.form(User.class).withDirectFieldAccess(true);
+        User user = loginForm.bindFromRequest(request).get();
 
-    public Result reset() { return ok("reset pword");}
+        //check plain pwd with corresponding username in db
+        if(user.checkPwd()){
+            return ok("correct login");
+        }
+        else{
+            return ok("incorrect login");
+        }
+
+    }
+
+    public Result reset() { 
+        return ok("reset pword");
+    }
 
 }
