@@ -1,30 +1,20 @@
 package models;
-import com.datastax.driver.core.*;
-
+import com.datastax.oss.driver.api.core.CqlSession;
+import com.datastax.oss.driver.api.core.cql.*;
 
 public class DbHandler {
 
-    private static String ip = "127.0.0.1";
-    private static String keyspace = "test";
-    static Cluster cluster = null;
+    private static String ip = "localhost";
 
-    public static String insertIntoDb(){
+    public static void addUser(User user){
 
-        try{
-
-            cluster = Cluster.builder().addContactPoint(ip).build();
-            Session session = cluster.connect(keyspace);
-    
-            ResultSet rs = session.execute("SELECT * FROM users");
-            Row row = rs.one();
-
-            return row.getString("username");
-    
+        try (CqlSession session = CqlSession.builder().build()) {
+            ResultSet rs = session.execute(String.format("INSERT into test.users (id,username,password) VALUES(uuid(),%s,%s)",user.username,user.password));
         }
         catch(Exception e){
-            return e.toString();
-        }
-    }
 
+        }
+        
+    }
     
 }

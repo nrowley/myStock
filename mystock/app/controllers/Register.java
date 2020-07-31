@@ -29,7 +29,10 @@ public class Register extends Controller {
         Form<User> userForm = formFactory.form(User.class).withDirectFieldAccess(true);
         User user = userForm.bindFromRequest(request).get();
         user.hashPassword();
+
+
         //return ok("Hello" + user.getPassword());
-        return ok(DbHandler.insertIntoDb());
+        DbHandler.addUser(user);
+        return ok("Hello " + user.getPassword());
     }
 }
