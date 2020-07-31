@@ -9,3 +9,5 @@ scalaVersion := "2.13.3"
 
 libraryDependencies += guice
 libraryDependencies += javaForms
+libraryDependencies += "com.datastax.oss" % "java-driver-core" % "3.6.0"
+
