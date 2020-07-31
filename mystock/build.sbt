@@ -9,5 +9,4 @@ scalaVersion := "2.13.3"
 
 libraryDependencies += guice
 libraryDependencies += javaForms
-libraryDependencies += "com.datastax.oss" % "java-driver-core" % "4.8.0"
-
+libraryDependencies += "com.datastax.cassandra" % "cassandra-driver-core" % "3.3.0"
