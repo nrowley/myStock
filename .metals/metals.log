@@ -44,3 +44,18 @@ Jul 30, 2020 6:06:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notif
 INFO: Unsupported notification method: $/setTraceNotification
 Jul 31, 2020 9:06:38 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTraceNotification
+Jul 31, 2020 9:06:43 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Jul 31, 2020 9:06:43 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Jul 31, 2020 9:06:46 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Jul 31, 2020 9:06:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Jul 31, 2020 9:07:17 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2020.07.31 09:44:43 INFO  shutting down Metals
+2020.07.31 14:47:08 INFO  started: Metals version 0.9.2 in workspace '/Users/nelson/Documents/Coding/myStock' for client vscode.
+2020.07.31 14:47:08 INFO  time: initialize in 0.36s
+2020.07.31 14:47:09 WARN  no build tool detected in workspace '/Users/nelson/Documents/Coding/myStock'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.07.31 14:47:09 INFO  no build target: using presentation compiler with only scala-library
