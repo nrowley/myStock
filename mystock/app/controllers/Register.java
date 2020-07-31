@@ -4,7 +4,7 @@ import play.*;
 import play.data.*;
 import javax.inject.*;
 import play.mvc.*;
-import java.util.*;
+import java.*;
 
 public class Register extends Controller {
 
@@ -15,9 +15,10 @@ public class Register extends Controller {
 
     }
 
-    public Result submitDetails(){
-        DynamicForm requestData = formFactory.form().bindFromRequest();
-        String username = requestData.get("username");
-        return ok(username);
+    public Result submitDetails(Http.Request request){
+        
+        DynamicForm requestData = formFactory.form().bindFromRequest(request);
+        
+        //return(ok(requestData));
     }
 }
