@@ -2,10 +2,6 @@ package controllers;
 
 import play.*;
 import models.User;
-import play.data.*;
-import javax.inject.*;
-import play.mvc.*;
-import java.*;
 import models.DbHandler;
 
 public class Register extends Controller {
