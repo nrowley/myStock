@@ -23,9 +23,11 @@ public class LoginController extends Controller {
 
         //check plain pwd with corresponding username in db
         if(user.checkPwd()){
-            return ok("correct login");
+            //show main page
+            return ok(views.html.index.render());
         }
         else{
+            //change html page to show the error message.
             return ok("incorrect login");
         }
 

@@ -6,6 +6,7 @@ public class DbHandler {
 
     private static String ip = "localhost";
 
+    //add user to db
     public static void addUser(User user){
 
         try (CqlSession session = CqlSession.builder().build()) {
