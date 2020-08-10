@@ -5,14 +5,14 @@
 # An example controller showing a sample home page
 GET     /                           controllers.LoginController.index
 
-GET /register                       controllers.Register.register
-GET /reset                          controllers.LoginController.reset
+GET     /register                   controllers.Register.register
+GET     /reset                      controllers.LoginController.reset
 
 +nocsrf
-POST /register                      controllers.Register.submitDetails(request: Request)
+POST    /register                   controllers.Register.submitDetails(request: Request)
 
 +nocsrf
-POST /                              controllers.LoginController.login(request: Request)
+POST    /                           controllers.LoginController.login(request: Request)
 
 
 
